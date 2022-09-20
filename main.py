@@ -1,14 +1,15 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return "esi sveiks"
+    return render_template('home.html')
 
 @app.route('/kontakti')
 def kontakti():
     return "seit ir kontakti"
 
+
 if __name__ == '_main_':
-    app.run(debug = True)
+    app.run( debug = True)
