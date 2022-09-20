@@ -1,6 +1,6 @@
-from flask import Flask, render_template
+from Flask import Flask, render_template
 
-app = Flask(__name__)
+app = flask(__name__)
 
 @app.route('/')
 def home():
@@ -10,6 +10,10 @@ def home():
 def kontakti():
     return "seit ir kontakti"
 
+@app.route('/iepriekseja.html')
+def iepriekseja():
+    return render_template(iepriekseja.html)
 
 if __name__ == '_main_':
-    app.run( debug = True)
+
+    app.run (debug = True)
